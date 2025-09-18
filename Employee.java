@@ -10,6 +10,11 @@ public class Employee{
     private boolean onLeave;
     private double hourlyWage;
     private double unpaidHours;
+    
+    private double taxRate;
+    private double Gross;
+    private double Deductions;
+    private double netSalary;
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         this.fullname = fullname;
@@ -60,10 +65,11 @@ public class Employee{
         //5. Set netSalary to Gross - Deductions
         
         // corrected code below
-        return double taxRate = 0.3;
-        return double Gross = unpaidHours * hourlyWage;
-        return double Deductions = Gross * taxRate;
-        return double netSalary = Gross - Deductions;
+
+        taxRate = 0.3;
+        Gross = unpaidHours * hourlyWage;
+        Deductions = Gross * taxRate;
+        netSalary = Gross - Deductions;
     }
 
     /*
