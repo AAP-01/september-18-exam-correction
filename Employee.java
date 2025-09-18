@@ -34,7 +34,7 @@ public class Employee{
         if (age >= 16) then{
             System.out.println(fullname + " can drive.");
         }else{
-            int yearsUntilSisxteen = 16 - age;
+            int yearsUntilSixteen = 16 - age;
             System.out.println(fullname + " must wait " + yearsUntilSixteen + " more years before they can drive.");
         }
     
