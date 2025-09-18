@@ -44,7 +44,7 @@ public class Employee{
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        1. Get values of unpaidHouts and hourlyWage
+        1. Get values of unpaidHours and hourlyWage
         2. Set taxRate to 30%
         3. Set Gross to unpaidHours * hourlyWage
         4. Set Deductions to Gross * taxRate
