@@ -31,25 +31,34 @@ public class Employee{
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
-        if (age >= 16) then{
+        //if (age >= 16) then{
+        //    System.out.println(fullname + " can drive.");
+        //}else{
+        //    int yearsUntilSixteen = 16 - age;
+        //    System.out.println(fullname + " must wait " + yearsUntilSixteen + " more years before they can drive.");
+        
+        // corrected code below
+        if (age >= 16){
+            return canDrive();
             System.out.println(fullname + " can drive.");
-        }else{
+        }
+        else{
+            return canDrive();
             int yearsUntilSixteen = 16 - age;
             System.out.println(fullname + " must wait " + yearsUntilSixteen + " more years before they can drive.");
         }
-    
-        // to be completed
     }
+    
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        1. Get values of unpaidHours and hourlyWage
-        2. Set taxRate to 30%
-        3. Set Gross to unpaidHours * hourlyWage
-        4. Set Deductions to Gross * taxRate
-        5. Set netSalary to Gross - Deductions
-        // to be completed
+        //1. Get values of unpaidHours and hourlyWage
+        //2. Set taxRate to 30%
+        //3. Set Gross to unpaidHours * hourlyWage
+        //4. Set Deductions to Gross * taxRate
+        //5. Set netSalary to Gross - Deductions
+        
     }
 
     /*
