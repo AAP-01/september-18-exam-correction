@@ -39,13 +39,13 @@ public class Employee{
         
         // corrected code below
         if (age >= 16){
-            return canDrive();
             System.out.println(fullname + " can drive.");
+            return canDrive();
         }
         else{
-            return canDrive();
             int yearsUntilSixteen = 16 - age;
             System.out.println(fullname + " must wait " + yearsUntilSixteen + " more years before they can drive.");
+            return canDrive();
         }
     }
     
@@ -59,13 +59,18 @@ public class Employee{
         //4. Set Deductions to Gross * taxRate
         //5. Set netSalary to Gross - Deductions
         
+        // corrected code below
+        return double taxRate = 0.3;
+        return double Gross = unpaidHours * hourlyWage;
+        return double Deductions = Gross * taxRate;
+        return double netSalary = Gross - Deductions;
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        System.out.println(fullname + " has received a wire transfer of " + netSalary + " $CAD.");
+        System.out.println(fullname + " has received a wire transfer of" + netSalary + " $CAD.");
         
     unpaidHours = 0.0;
         // to be completed
