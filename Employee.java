@@ -60,7 +60,6 @@ public class Employee{
         //5. Set netSalary to Gross - Deductions
         
         // corrected code below
-
         double taxRate = 0.30;
         double Gross = (unpaidHours * hourlyWage);
         double Deductions = (Gross * taxRate);
@@ -73,9 +72,13 @@ public class Employee{
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
+        //System.out.println(fullname + " has received a wire transfer of " + netSalary + " $CAD.");
+        
+    //unpaidHours = 0.0;
+        
+        // corrected code below
         double netSalary = calculatePay();
         System.out.println(fullname + " has received a wire transfer of " + netSalary + " $CAD.");
         unpaidHours = 0.0;
-        // to be completed
     }
 }
