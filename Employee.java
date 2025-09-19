@@ -10,11 +10,6 @@ public class Employee{
     private boolean onLeave;
     private double hourlyWage;
     private double unpaidHours;
-    
-    private double taxRate;
-    private double Gross;
-    private double Deductions;
-    private double netSalary;
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         this.fullname = fullname;
@@ -66,20 +61,19 @@ public class Employee{
         
         // corrected code below
 
-        taxRate = 0.3;
-        Gross = (unpaidHours * hourlyWage);
-        Deductions = (Gross * taxRate);
-        netSalary = (Gross - Deductions);
+        double taxRate = 0.30;
+        double Gross = (unpaidHours * hourlyWage);
+        double Deductions = (Gross * taxRate);
+        double netSalary = (Gross - Deductions);
         
         return netSalary;
-        
-        
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
+        double netSalary = calculatePay();
         System.out.println(fullname + " has received a wire transfer of " + netSalary + " $CAD.");
         unpaidHours = 0.0;
         // to be completed
