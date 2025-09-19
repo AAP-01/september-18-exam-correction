@@ -21,7 +21,7 @@ public class Employee{
         this.yearOfBirth = yearOfBirth;
         this.hourlyWage = hourlyWage;
         onLeave = false;
-        unpaidHours = 0.0;
+        unpaidHours = 10.0;
     }
     
     /**
@@ -43,14 +43,14 @@ public class Employee{
         //    System.out.println(fullname + " must wait " + yearsUntilSixteen + " more years before they can drive.");
         
         // corrected code below
-        if (age >= 16){
+        if(age >= 16) {
             System.out.println(fullname + " can drive.");
-            return canDrive();
+            return true;
         }
-        else{
+        else {
             int yearsUntilSixteen = 16 - age;
-            System.out.println(fullname + " must wait " + yearsUntilSixteen + " more years before they can drive.");
-            return canDrive();
+            System.out.println(fullname + " must wait " + yearsUntilSixteen + " more year(s) before they can drive.");
+            return false;
         }
     }
     
@@ -67,18 +67,21 @@ public class Employee{
         // corrected code below
 
         taxRate = 0.3;
-        Gross = unpaidHours * hourlyWage;
-        Deductions = Gross * taxRate;
-        netSalary = Gross - Deductions;
+        Gross = (unpaidHours * hourlyWage);
+        Deductions = (Gross * taxRate);
+        netSalary = (Gross - Deductions);
+        
+        return netSalary;
+        
+        
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        System.out.println(fullname + " has received a wire transfer of" + netSalary + " $CAD.");
-        
-    unpaidHours = 0.0;
+        System.out.println(fullname + " has received a wire transfer of " + netSalary + " $CAD.");
+        unpaidHours = 0.0;
         // to be completed
     }
 }
