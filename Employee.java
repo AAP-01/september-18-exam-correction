@@ -16,7 +16,7 @@ public class Employee{
         this.yearOfBirth = yearOfBirth;
         this.hourlyWage = hourlyWage;
         onLeave = false;
-        unpaidHours = 10.0;
+        unpaidHours = 0.0;
     }
     
     /**
@@ -67,7 +67,11 @@ public class Employee{
         
         return netSalary;
     }
-
+    
+    public double setUnpaidHours(double newUnpaidHours){
+        return unpaidHours = newUnpaidHours;
+    }
+    
     /*
      * Output the payment record and resets unpaid hours
      */
